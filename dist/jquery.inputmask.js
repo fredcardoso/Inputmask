@@ -105,7 +105,7 @@
                 numericInput: !1,
                 rightAlign: !1,
                 undoOnEscape: !0,
-                radixPoint: "",
+                radixPoint: ",",
                 _radixDance: !1,
                 groupSeparator: "",
                 keepStatic: null,
@@ -2499,8 +2499,8 @@
                 }
             },
             currency: {
-                prefix: "",
-                groupSeparator: ",",
+                prefix: "R$ ",
+                groupSeparator: ".",
                 alias: "numeric",
                 digits: 2,
                 digitsOptional: !1
