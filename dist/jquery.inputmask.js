@@ -2211,7 +2211,7 @@
             opts.parseMinMaxOptions = "done");
         }
         function genMask(opts) {
-            opts.repeat = 0, opts.groupSeparator === opts.radixPoint && opts.digits && "0" !== opts.digits && ("," === opts.radixPoint ? opts.groupSeparator = "," : "," === opts.radixPoint ? opts.groupSeparator = "." : opts.groupSeparator = ""), 
+            opts.repeat = 0, opts.groupSeparator === opts.radixPoint && opts.digits && "0" !== opts.digits && ("," === opts.radixPoint ? opts.groupSeparator = "." : "," === opts.radixPoint ? opts.groupSeparator = "." : opts.groupSeparator = ""), 
             " " === opts.groupSeparator && (opts.skipOptionalPartCharacter = void 0), 1 < opts.placeholder.length && (opts.placeholder = opts.placeholder.charAt(0)), 
             "radixFocus" === opts.positionCaretOnClick && "" === opts.placeholder && (opts.positionCaretOnClick = "lvp");
             var decimalDef = "0", radixPointDef = opts.radixPoint;
@@ -2266,7 +2266,7 @@
                 radixPoint: ",",
                 positionCaretOnClick: "radixFocus",
                 _radixDance: !0,
-                groupSeparator: ".",
+                groupSeparator: "",
                 allowMinus: !0,
                 negationSymbol: {
                     front: "-",
