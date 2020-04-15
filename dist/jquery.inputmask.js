@@ -2203,15 +2203,15 @@
         }
         function parseMinMaxOptions(opts) {
             void 0 === opts.parseMinMaxOptions && (null !== opts.min && (opts.min = opts.min.toString().replace(new RegExp(escapeRegex(opts.groupSeparator), "g"), ""), 
-            "," === opts.radixPoint && (opts.min = opts.min.replace(opts.radixPoint, ".")), 
+            "." === opts.radixPoint && (opts.min = opts.min.replace(opts.radixPoint, ",")), 
             opts.min = isFinite(opts.min) ? parseFloat(opts.min) : NaN, isNaN(opts.min) && (opts.min = Number.MIN_VALUE)), 
             null !== opts.max && (opts.max = opts.max.toString().replace(new RegExp(escapeRegex(opts.groupSeparator), "g"), ""), 
-            "," === opts.radixPoint && (opts.max = opts.max.replace(opts.radixPoint, ".")), 
+            "." === opts.radixPoint && (opts.max = opts.max.replace(opts.radixPoint, ",")), 
             opts.max = isFinite(opts.max) ? parseFloat(opts.max) : NaN, isNaN(opts.max) && (opts.max = Number.MAX_VALUE)), 
             opts.parseMinMaxOptions = "done");
         }
         function genMask(opts) {
-            opts.repeat = 0, opts.groupSeparator === opts.radixPoint && opts.digits && "0" !== opts.digits && ("." === opts.radixPoint ? opts.groupSeparator = "," : "," === opts.radixPoint ? opts.groupSeparator = "." : opts.groupSeparator = ""), 
+            opts.repeat = 0, opts.groupSeparator === opts.radixPoint && opts.digits && "0" !== opts.digits && ("," === opts.radixPoint ? opts.groupSeparator = "," : "," === opts.radixPoint ? opts.groupSeparator = "." : opts.groupSeparator = ""), 
             " " === opts.groupSeparator && (opts.skipOptionalPartCharacter = void 0), 1 < opts.placeholder.length && (opts.placeholder = opts.placeholder.charAt(0)), 
             "radixFocus" === opts.positionCaretOnClick && "" === opts.placeholder && (opts.positionCaretOnClick = "lvp");
             var decimalDef = "0", radixPointDef = opts.radixPoint;
@@ -2263,10 +2263,10 @@
                 digits: "*",
                 digitsOptional: !0,
                 enforceDigitsOnBlur: !1,
-                radixPoint: ".",
+                radixPoint: ",",
                 positionCaretOnClick: "radixFocus",
                 _radixDance: !0,
-                groupSeparator: "",
+                groupSeparator: ".",
                 allowMinus: !0,
                 negationSymbol: {
                     front: "-",
